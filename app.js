@@ -1,5 +1,4 @@
-//TODO: Implementar vars de entorno
-
+require("dotenv").config()
 const express = require("express")
 const path = require("path")
 const routes = require("./src/routes/routes.js")
@@ -10,9 +9,6 @@ const session = require('express-session')
 const cookieParser = require('cookie-parser')
 const isLoggedMiddleware = require("./src/middlewares/userLogged")
 const PORT = 4000
-const mongoose_USER = "SatoIsReal"
-const mongoose_PASSWORD = "gMTfkHdpmXMjD5so"
-const mongoose_URI =  `mongodb+srv://${mongoose_USER}:${mongoose_PASSWORD}@cluster0.6ines.mongodb.net/To-Do?retryWrites=true&w=majority`
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
@@ -20,14 +16,14 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use(session({
-    secret: 'Sato',
+    secret: process.env.SESSION_SECRET,
     resave: true,
     saveUninitialized: true
 }))
 
 app.use(cookieParser())
 
-mongoose.connect(mongoose_URI, (err) => {
+mongoose.connect(process.env.MONGOOSE_URI, (err) => {
     if(err){
         throw err
     } else {

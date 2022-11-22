@@ -23,6 +23,8 @@ router.post("/interface/edit", dbController.postEditRegister)
 
 router.post("/interface/completed", dbController.postCompletedReminder)
 
+router.get("/user/logout", dbController.logOut)
+
 router.get("/tests", dbController.tests)
 
 router.get("/interface", dbController.interface)

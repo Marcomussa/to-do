@@ -105,18 +105,25 @@ let dbController = {
                     id: docs[0]._id,
                     name: docs[0].name 
                 }
-                
-                res.cookie('LoggedUserCookie', {
-                    name: docs[0].name,
-                    email: docs[0].email
-                })
+
+                if(req.body.recordarSesion == "on"){
+                    res.cookie('LoggedUserCookie', {
+                        name: docs[0].name,
+                        email: docs[0].email
+                    })
+                }
 
                 console.log("Logged In")
+                
                 res.redirect("/")
             } else { 
                 res.status(404).send("Auth Error") 
             }
         })
+    },
+    logOut: (req, res) => {
+        req.session.destroy();
+        res.redirect("/")
     },
     newReminder: (req, res) => { 
         let {title, description, date, hour, enableMailReminder} = req.body
@@ -227,7 +234,7 @@ let dbController = {
         reminderModel.find({
             createdBy: req.session.userLogged.id
         }, (err, docs) => {
-            res.render("completedReminder", {
+            res.render("allReminders", {
                 docs
             })
         })
@@ -249,7 +256,7 @@ let dbController = {
         })
     },
     allRemindersNewest: (req, res) => {
-        
+
     }
 }
 

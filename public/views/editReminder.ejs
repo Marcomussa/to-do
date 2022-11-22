@@ -6,7 +6,7 @@
    
     <%- include("./partials/nav.ejs") %> 
     <section class="loginRegisterSection">
-        <h3>Crear Nuevo Recordatorio:</h3>
+        <h3>Editar "<%= docs[0].title %>" </h3>
         <form action="/interface/edit?id=<%= docs[0].id %>" method="POST">
             <div>
                 <input type="text" id="newReminderTitle" name="title" placeholder="<%= docs[0].title %>">            

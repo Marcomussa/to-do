@@ -10,7 +10,7 @@
                 <a href="/interface/all">Todos</a>
             </div>
             <div>
-                <a href="/interface">Proximamente</a>
+                <a href="/interface" class="proximamenteAside">Proximamente</a>
             </div>
             <div>
                 <a href="/interface/today">Hoy</a>
@@ -36,7 +36,6 @@
                 <div> Opciones </div>
             </div>
            <% for(let i = 0; i < docs.length; i++){ %>
-                <hr> 
                 <div class="reminderContet">
                     <div>
                         <%= docs[i].title %> 
@@ -70,3 +69,9 @@
 </body>
 
 <%- include("./partials/footer.ejs") %> 
+
+<style>
+    .proximamenteAside {
+        border-bottom: 2px solid white;
+    }
+</style>

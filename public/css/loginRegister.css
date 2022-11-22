@@ -2,22 +2,55 @@
     margin: 75px 50px;
     padding: 25px;
     text-align: center;
+    background: rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.35);
 }
 
 .loginRegisterSection h3 {
     margin-bottom: 20px;
-    font-size: 38px;
+    font-size: 48px;
     font-weight: 300;
+    color: white;
 }
 
 .loginRegisterSection h5 {
     margin-bottom: 20px;
     font-size: 18px;
     font-weight: 300;
+    color: white;
+}
+
+.loginRegisterSection h5 a,
+.aceptarTerminosYCondiciones {
+    font-weight: 300;
+    color: white;
+}
+
+.aceptarTerminosYCondiciones:hover {
+    text-decoration: underline;
 }
 
 .loginRegisterSection div {
     margin-bottom: 20px;
+}
+
+.loginRegisterSection div input[type="text"],
+.loginRegisterSection div input[type="password"],
+textarea, input[type="date"], input[type="time"]  {
+    padding: 14px 20px; 
+    font-size:16px; 
+    border-style:solid; 
+    border-color:#ffffff; 
+    border-width:3px; 
+    background: none;
+    color:#ffffff; 
+    box-shadow: 6px 4px 13px 0px rgba(42,42,42,.76); 
+    border-radius: 30px;
+    background: rgba(255,255,255,0.1);
+}
+
+.loginRegisterSection div input:focus { 
+    outline: none;
 }
 
 .loginRegisterSection div input,
@@ -30,16 +63,29 @@
     margin-bottom: 5px;
 }
 
+.loginRegisterSection div input[type="submit"] {
+    width: 15%;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid white;
+    color: white;
+}
+
 .loginRegisterSection div button {
     background: white;
 }
+
+.loginRegisterSection div input[type="submit"]:hover {
+    width: 15%;
+    border: 2px solid lime;
+    color: lime;
+}
+
 
 .loginRegisterSection div button:hover {
     cursor: pointer;
 }
 
 .btn-submit-login {
-    background-image: linear-gradient(to right, #4ada82, #5fe070, #75e45a, #8ee83f, #a8eb12);
     margin-top: 20px;
 }
 

@@ -16,7 +16,7 @@
                 <a href="/interface/today">Hoy</a>
             </div>
             <div>
-                <a href="/interface/completed">Ya completados</a>
+                <a href="/interface/completed" class="completadosAside">Ya completados</a>
             </div>
         </div>
         <div class="mainInterface"> 
@@ -65,3 +65,9 @@
 </body>
 
 <%- include("./partials/footer.ejs") %> 
+
+<style>
+    .completadosAside {
+        border-bottom: 2px solid white;
+    }
+</style>

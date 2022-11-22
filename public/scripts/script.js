@@ -8,7 +8,7 @@ window.addEventListener("scroll", () => {
     console.log(scrollTop, clientHeight)
 
     for(let i = 600; i <= 660; i++){
-        if(scrollTop == i){
+        if(Math == i){
             console.log(mainSectionImg_3)
             mainSectionImg_3.classList.add("animate__backInRight")
         }

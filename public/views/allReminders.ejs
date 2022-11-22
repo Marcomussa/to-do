@@ -7,13 +7,13 @@
     <section class="interfaceSection">
         <div class="aside">
             <div>
-                <a href="/interface/all">Todos</a>
+                <a href="/interface/all" class="todosAside">Todos</a>
             </div>
             <div>
                 <a href="/interface">Proximamente</a>
             </div>
             <div>
-                <a href="/interface/today">Hoyyy</a>
+                <a href="/interface/today">Hoy</a>
             </div>
             <div>
                 <a href="/interface/completed">Ya completados</a>
@@ -47,12 +47,18 @@
                         <%= docs[i].description %> 
                     </div>
                     <div>
-                        <form
-                            class="form-btn-completed-reminder" 
-                            action="/interface/completed?id=<%= docs[i].id %>" 
-                            method="POST">
-                            <input type="submit" value="Hecho">
-                        </form>
+                        <%= docs[i].isCompleted %> 
+                    </div>
+                    <div>
+                        <% if(!docs[i].isCompleted){ %>
+                            <form
+                                class="form-btn-completed-reminder" 
+                                action="/interface/completed?id=<%= docs[i].id %>" 
+                                method="POST">
+                                <input type="submit" value="Hecho">
+                            </form>
+                        <% } %>
+                        
                         <a href="/interface/edit?id=<%= docs[i].id %>">Editar</a>
                         <a href="/interface/delete/<%= docs[i].id %>">Eliminar</a>
                     </div>
@@ -66,3 +72,9 @@
 </body>
 
 <%- include("./partials/footer.ejs") %> 
+
+<style>
+    .todosAside {
+        border-bottom: 2px solid white;
+    }
+</style>
