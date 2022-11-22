@@ -36,7 +36,7 @@
                 <div> Opciones </div>
             </div>
            <% for(let i = 0; i < docs.length; i++){ %>
-                <hr> 
+        
                 <div class="reminderContet">
                     <div>
                         <%= docs[i].title %> 
@@ -59,6 +59,9 @@
         </div>    
     </section>
     
+
+    <%- include("./partials/background.ejs") %> 
+
 </body>
 
 <%- include("./partials/footer.ejs") %> 

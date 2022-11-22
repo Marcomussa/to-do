@@ -4,14 +4,15 @@ nav {
     margin: 25px 50px;
     padding: 25px 0px;
     font-size: 26px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 nav .contenidoNavDer a,
 nav .contenidoNavIzq a {
     text-decoration: none;
     display: inline-block;
-    color: #000;
+    color: white;
+
 }
 
 nav .contenidoNavDer a:hover,

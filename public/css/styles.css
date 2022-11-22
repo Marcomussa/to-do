@@ -4,6 +4,7 @@
 @import "responsive.css";
 @import "interface.css";
 @import "newReminder.css";
+@import "background.css";
 
 * {
     box-sizing: border-box;

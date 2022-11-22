@@ -2,7 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     margin: 50px; 
-    padding: 25px 50px
+    padding: 25px 50px;
+    background: rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.35);
 }
 
 .interfaceSection .aside {
@@ -18,15 +20,27 @@
 .interfaceSection .aside a{
     text-decoration: none;
     font-size: 23px;
+    color: white;
+}
+
+.interfaceSection .aside a:hover{
+    text-decoration: underline;
 }
 
 .interfaceSection .mainInterface {
+    color: white;
     width: 85%;
 }
 
 .interfaceSection .mainInterface .navbar-interface {
     display: flex;
     justify-content: space-between;
+    color: white;
+}
+
+.interfaceSection .mainInterface .navbar-interface a{
+    color: white;
+    text-decoration: none;
 }
 
 .mainInterface .reminderContentTitles {
@@ -57,11 +71,6 @@
 .mainInterface .reminderContentTitles div:nth-child(3) {
     text-align: center;
 }
-
-.mainInterface .reminderContet {
-    margin: 15px 0px;
-}
-
 .mainInterface .reminderContet a {
     display: inline-block;
     margin-left: 7px;
@@ -82,6 +91,22 @@
 .form-btn-completed-reminder input:hover {
     cursor: pointer;
 }
+
+.mainInterface .reminderContet {
+    border-bottom: 1px solid white;
+    margin-bottom: 40px;
+    padding-bottom: 5px;
+    font-weight: 200;
+}
+
+.mainInterface .reminderContet div:nth-child(5) a{
+    color: white
+}
+
+.mainInterface .reminderContet div:nth-child(5) a:hover{
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 1300px){
 
     .interfaceSection .aside {

@@ -1,9 +1,13 @@
 .mainSection {
-    margin: 25px 50px;
-    padding: 25px;
+    margin: 75px 50px;
+    padding-top: 75px;
+    padding-bottom: 125px;
     display: flex;
     justify-content: center;
     text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.35);
 }
 
 .mainSection div:nth-child(1) h1{
@@ -18,11 +22,15 @@
 }
 
 .contentSection {
-    margin: 100px 200px;
+    margin: 75px 50px;
+    padding: 100px 200px;
     padding: 25px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.35);
 }
 
 .contentSection h4 {
@@ -60,3 +68,4 @@
 .contenedorImgSection img{
     width: 100%;
 }
+
