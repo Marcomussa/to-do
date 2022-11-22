@@ -1,7 +1,10 @@
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1450px){
     .loginRegisterSection div input,
     .loginRegisterSection div button {
         width: 50%;
+    }
+    .contentSection {
+        margin: 50px 100px;
     }
 }
 
