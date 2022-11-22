@@ -1,0 +1,53 @@
+.loginRegisterSection {
+    margin: 75px 50px;
+    padding: 25px;
+    text-align: center;
+}
+
+.loginRegisterSection h3 {
+    margin-bottom: 20px;
+    font-size: 38px;
+    font-weight: 300;
+}
+
+.loginRegisterSection h5 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.loginRegisterSection div {
+    margin-bottom: 20px;
+}
+
+.loginRegisterSection div input,
+.loginRegisterSection div button,
+.loginRegisterSection div textarea {
+    width: 30%;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.loginRegisterSection div button {
+    background: white;
+}
+
+.loginRegisterSection div button:hover {
+    cursor: pointer;
+}
+
+.btn-submit-login {
+    background-image: linear-gradient(to right, #4ada82, #5fe070, #75e45a, #8ee83f, #a8eb12);
+    margin-top: 20px;
+}
+
+.btn-submit-login:hover {
+    cursor: pointer;
+}
+
+.aceptarTerminosYCondiciones:hover {
+    cursor: pointer;
+}
+

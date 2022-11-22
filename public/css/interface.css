@@ -1,0 +1,97 @@
+.interfaceSection {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px; 
+    padding: 25px 50px
+}
+
+.interfaceSection .aside {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.interfaceSection .aside div {
+    margin-bottom: 10px;
+}
+
+.interfaceSection .aside a{
+    text-decoration: none;
+    font-size: 23px;
+}
+
+.interfaceSection .mainInterface {
+    width: 85%;
+}
+
+.interfaceSection .mainInterface .navbar-interface {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainInterface .reminderContentTitles {
+    margin: 20px 0px;
+    font-size: 26px;
+}
+
+.mainInterface .reminderContet, 
+.mainInterface .reminderContentTitles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainInterface .reminderContet div, 
+.mainInterface .reminderContentTitles div {
+    width: 20%;
+    display: inline-block;
+}
+
+.mainInterface .reminderContet div:nth-child(5), 
+.mainInterface .reminderContentTitles div:nth-child(5),
+.mainInterface .reminderContet div:nth-child(4), 
+.mainInterface .reminderContentTitles div:nth-child(4) {
+    text-align: right;
+}
+
+.mainInterface .reminderContet div:nth-child(3), 
+.mainInterface .reminderContentTitles div:nth-child(3) {
+    text-align: center;
+}
+
+.mainInterface .reminderContet {
+    margin: 15px 0px;
+}
+
+.mainInterface .reminderContet a {
+    display: inline-block;
+    margin-left: 7px;
+    text-decoration: none;
+}
+
+.form-btn-completed-reminder {
+    display: inline;
+}
+
+.form-btn-completed-reminder input {
+    background: none;
+    border: none;
+    color: blue;
+    font-size: 16px;
+}
+
+.form-btn-completed-reminder input:hover {
+    cursor: pointer;
+}
+@media screen and (max-width: 1300px){
+
+    .interfaceSection .aside {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .interfaceSection .mainInterface {
+        width: 100%;
+    }
+}

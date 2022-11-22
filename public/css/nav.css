@@ -1,0 +1,29 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 50px;
+    padding: 25px 0px;
+    font-size: 26px;
+    border-bottom: 1px solid #000;
+}
+
+nav .contenidoNavDer a,
+nav .contenidoNavIzq a {
+    text-decoration: none;
+    display: inline-block;
+    color: #000;
+}
+
+nav .contenidoNavDer a:hover,
+nav .contenidoNavIzq a:hover {
+    text-decoration: underline;
+}
+
+nav .contenidoNavIzq a {
+    margin-right: 25px;
+}
+
+nav .contenidoNavDer a:nth-child(1) {
+    display: inline-block;
+    margin-right: 25px;
+}

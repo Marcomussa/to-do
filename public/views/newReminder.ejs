@@ -1,0 +1,32 @@
+
+<%- include("./partials/head.ejs") %> 
+
+
+<body>
+   
+    <%- include("./partials/nav.ejs") %> 
+    <section class="loginRegisterSection">
+        <h3>Crear Nuevo Recordatorio:</h3>
+        <form action="/interface/new" method="POST">
+            <div>
+                <input type="text" id="newReminderTitle" name="title" placeholder="Titulo">            
+            </div>
+            <div>
+                <textarea name="description" placeholder="Descripcion"></textarea>
+            </div>
+            <div>
+                <input type="date" name="date">
+            </div>
+            <div>
+                <input type="time" name="hour">
+            </div>
+            <div>
+                <input type="submit" value="Crear Recordatorio" class="btn-submit-login">
+            </div>
+        </form>
+    </section>
+    
+</body>
+
+<%- include("./partials/footer.ejs") %> 
+ 

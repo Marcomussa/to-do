@@ -1,0 +1,70 @@
+
+<%- include("./partials/head.ejs") %> 
+<body>
+   
+    <%- include("./partials/nav.ejs") %> 
+
+    <section class="interfaceSection">
+        <div class="aside">
+            <div>
+                <a href="/interface/all">Todos</a>
+            </div>
+            <div>
+                <a href="/interface">Proximamente</a>
+            </div>
+            <div>
+                <a href="/interface/today">Hoy</a>
+            </div>
+            <div>
+                <a href="/interface/completed">Ya completados</a>
+            </div>
+        </div>
+        <div class="mainInterface"> 
+            <div class="navbar-interface">
+                <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                    <option value="">Ordenar por:</option>
+                    <option value="/interface/today/newest">Mas Reciente</option>
+                    <option value="/interface/today/oldest">Mas Viejo</option>
+                </select>
+                <a href="/interface/new">Crear Nuevo</a>
+            </div>
+            <div class="reminderContentTitles">
+                <div> Titulo </div>
+                <div> Fecha y Hora </div>
+                <div> Descripcion </div>
+                <div> Completado </div>
+                <div> Opciones </div>
+            </div>
+           <% for(let i = 0; i < docs.length; i++){ %>
+                <hr> 
+                <div class="reminderContet">
+                    <div>
+                        <%= docs[i].title %> 
+                    </div>
+                    <div>
+                        <%= docs[i].date %> - <%= docs[i].hour %> 
+                    </div>
+                    <div>
+                        <%= docs[i].description %> 
+                    </div>
+                    <div>
+                        <%= docs[i].isCompleted %> 
+                    </div>
+                    <div>
+                        <form
+                            class="form-btn-completed-reminder" 
+                            action="/interface/completed?id=<%= docs[i].id %>" 
+                            method="POST">
+                            <input type="submit" value="Hecho">
+                        </form>
+                        <a href="/interface/edit?id=<%= docs[i].id %>">Editar</a>
+                        <a href="/interface/delete/<%= docs[i].id %>">Eliminar</a>
+                    </div>
+                </div>
+            <% } %>
+        </div>    
+    </section>
+    
+</body>
+
+<%- include("./partials/footer.ejs") %> 

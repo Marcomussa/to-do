@@ -1,0 +1,62 @@
+.mainSection {
+    margin: 25px 50px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.mainSection div:nth-child(1) h1{
+    font-size: 120px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.mainSection div:nth-child(1) h3{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.contentSection {
+    margin: 100px 200px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contentSection h4 {
+    font-size: 50px;
+}
+
+.contentSection p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.contentSection div {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.contentSection_1, 
+.contentSection_2, 
+.contentSection_3 {
+    display: flex;
+    align-items: center;
+}
+
+.contentSection_2 {
+    text-align: right;
+}
+
+.contentSection_1 div:nth-child(1),
+.contentSection_2 div:nth-child(1),
+.contentSection_3 div:nth-child(1) {
+    padding-right: 30px;
+}
+
+
+.contenedorImgSection img{
+    width: 100%;
+}

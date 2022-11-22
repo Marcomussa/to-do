@@ -1,0 +1,46 @@
+
+<%- include("./partials/head.ejs") %> 
+
+
+<body>
+   
+    <%- include("./partials/nav.ejs") %> 
+
+    <section class="loginRegisterSection">
+        <h3>Registrarse:</h3>
+
+        <div>
+            <button>
+                <i class="fa-brands fa-google"></i>                  
+                Continuar con Google</button>
+        </div>
+        
+        <form action="/register" method="POST">
+            <div>
+                <input type="text" name="name" placeholder="Nombre">
+            </div>
+            <div>
+                <input type="text" name="surname" placeholder="Apellido">
+            </div>
+            <div>
+                <input type="text" name="email" placeholder="Email">
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Password">
+            </div>
+
+            <input type="checkbox" name="checkbox" id="checkbox" class="aceptarTerminosYCondiciones">
+
+            <label for="checkbox" class="aceptarTerminosYCondiciones">Acepto los Terminos y Condiciones</label>
+           
+            <div>
+                <input type="submit" value="Register" class="btn-submit-login">
+            </div>
+        </form>
+
+        <h5>Ya tienes una cuenta? <a href="/login">Inicia Sesion</a> </h5>
+    </section>
+
+</body>
+
+<%- include("./partials/footer.ejs") %> 

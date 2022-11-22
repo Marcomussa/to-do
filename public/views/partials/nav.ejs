@@ -1,0 +1,17 @@
+<nav>
+    <div class="contenidoNavIzq">   
+        <a href="/">Menu</a>
+        <% if (locals.isLogged) { %>
+            <a href="/interface">Interfaz</a>
+        <% } %> 
+        <a href="/">Lorem</a>
+    </div>
+    <div class="contenidoNavDer">
+        <% if (locals.isLogged) { %>
+                <a href="">Perfil</a>
+            <% } else { %>
+                <a href="/login">Iniciar Sesion</a>
+                <a href="/register">Registrarse</a>
+        <% } %>
+    </div>
+</nav>

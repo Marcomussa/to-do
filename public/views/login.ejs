@@ -1,0 +1,36 @@
+
+<%- include("./partials/head.ejs") %> 
+
+
+<body>
+   
+    <%- include("./partials/nav.ejs") %> 
+
+    <section class="loginRegisterSection">
+        <h3>Iniciar Sesion</h3>
+
+        <div>
+            <button>
+                <i class="fa-brands fa-google"></i>                  
+                Continuar con Google</button>
+        </div>
+        
+        <form action="/login" method="POST">
+            <div>
+                <input type="text" name="email" id="" placeholder="Email">
+            </div>
+            <div>
+                <input type="password" name="password" id="" placeholder="Password">
+            </div>
+            <div>
+                <input type="submit" value="Log In" class="btn-submit-login">
+            </div>
+        </form>
+
+        <h5><a href="">Olvidaste tu password?</a></h5>
+        <h5>No tienes una cuenta? <a href="/register">Registrate Aqui</a> </h5>
+    </section>
+
+</body>
+
+<%- include("./partials/footer.ejs") %> 

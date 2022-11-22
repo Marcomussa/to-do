@@ -1,0 +1,23 @@
+.newReminder {
+    margin: 75px 50px;
+    padding: 25px;
+    text-align: center;
+}
+
+.newReminder input{
+    width: 30%;
+    text-align: center;
+}
+
+.newReminder h3 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+    margin: 30px;
+}
+
+.newReminder div form div {
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: column;
+}
