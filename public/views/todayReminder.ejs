@@ -50,12 +50,14 @@
                         <%= docs[i].isCompleted %> 
                     </div>
                     <div>
-                        <form
-                            class="form-btn-completed-reminder" 
-                            action="/interface/completed?id=<%= docs[i].id %>" 
-                            method="POST">
-                            <input type="submit" value="Hecho">
-                        </form>
+                        <% if(!docs[i].isCompleted){ %>
+                            <form
+                                class="form-btn-completed-reminder" 
+                                action="/interface/completed?id=<%= docs[i].id %>" 
+                                method="POST">
+                                <input type="submit" value="Hecho">
+                            </form>
+                        <% } %>
                         <a href="/interface/edit?id=<%= docs[i].id %>">Editar</a>
                         <a href="/interface/delete/<%= docs[i].id %>">Eliminar</a>
                     </div>
